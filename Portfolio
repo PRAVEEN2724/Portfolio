@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen S - Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        section { margin-bottom: 20px; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Praveen S</h1>
+
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I am a Information Technology student at R.M.D Engineering College, passionate about web development. I enjoy creating user-friendly websites and exploring new frameworks like React. My curiosity and dedication make me stand out in team projects.
+        </p>
+    </section>
+
+    <section>
+        <h2>Skills and Interests</h2>
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Problem Solving</li>
+        </ul>
+        <h3>Interests</h3>
+        <ul>
+            <li>Coding</li>
+            <li>Reading Tech Blogs</li>
+            <li>Photography</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <h3>Personal Portfolio</h3>
+        <p>A simple portfolio website built with HTML and CSS to showcase my skills.</p>
+        <p><a href="Not available">Not available</a></p>
+
+        <h3>Tiles Mart</h3>
+        <p>A tile store web app developed using React and Spring Boot, featuring a product catalog.</p>
+        <p><a href="Not available">Not available</a></p>
+    </section>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:praveenhaha0@gmail.com">praveenhaha0@gmail.com</a></p>
+        <p>LinkedIn: <a href="www.linkedin.com/in/praveen-sivan-a4055b31a">linkedin</a></p>
+        <p>GitHub: <a href="https://github.com/PRAVEEN2724">github</a></p>
+    </section>
+</body>
+</html>

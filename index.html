@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen S - Portfolio</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+#theme-toggle {
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #0066cc, #33ccff);
+    color: #fff;
+}
+
+.typing {
+    font-size: 2.5rem;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid #fff;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #0066cc;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-btn.active {
+    background: #004c99;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #004c99;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+#scroll-to-top:hover {
+    background: #004c99;
+}
+
+body.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode .navbar {
+    background: #111;
+}
+
+body.dark-mode .project-card {
+    background: #333;
+}
+
+body.dark-mode .btn {
+    background: #33ccff;
+    color: #000;
+}
+
+body.dark-mode .btn:hover {
+    background: #00b3e6;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .typing {
+        font-size: 1.8rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Praveen S</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">Toggle Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1 class="typing">Hi, I'm Praveen S, <span class="role">Web Developer</span></h1>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>
+                I am an Information Technology student at R.M.D Engineering College, passionate about web development. I enjoy creating user-friendly websites and exploring new frameworks like React. My curiosity and dedication make me stand out in team projects.
+            </p>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Skills & Interests</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Interests</h3>
+                    <ul>
+                        <li>Coding</li>
+                        <li>Reading Tech Blogs</li>
+                        <li>Photography</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="react">React</button>
+            </div>
+            <div class="project-grid">
+                <div class="project-card" data-category="web">
+                    <h3>Personal Portfolio</h3>
+                    <p>A simple portfolio website built with HTML and CSS to showcase my skills.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card" data-category="react">
+                    <h3>Tiles Mart</h3>
+                    <p>A tile store web app developed using React and Spring Boot, featuring a product catalog.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Praveen S. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:praveenhaha0@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/praveen-sivan-a4055b31a">LinkedIn</a>
+                <a href="https://github.com/PRAVEEN2724">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" title="Back to Top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
